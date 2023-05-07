@@ -1,4 +1,4 @@
-# resm
+# Real Estate Management System
 
 ### Technologies to be implemented
 
