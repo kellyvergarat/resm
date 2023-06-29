@@ -1,0 +1,73 @@
+﻿<Window x:Class="RealStateManagement.userDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealStateManagement"
+        mc:Ignorable="d"
+        Title="My Properties" Height="600" Width="800" WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Navbar -->
+        <StackPanel Background="#FF12A1B2" Orientation="Horizontal" VerticalAlignment="Top" >
+            <TextBlock Text="Welcome, John Doe" FontSize="24" FontWeight="Bold" Foreground="White" />
+
+            <!-- Add more navbar options or functionality as needed -->
+            <Button Content="Logout" Margin="10,0,0,0" Background="#FF12A1B2" Foreground="White" />
+        </StackPanel>
+
+        <!-- Main content area -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Sidebar -->
+            <StackPanel Background="#EAEAEA" Width="200" VerticalAlignment="Top" Margin="0,50,0,0">
+                <Button Content="My Properties" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" />
+                <Button Content="Search Properties" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" />
+                <Button Content="Payment" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" />
+                <Button Content="Messages" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" />
+                <Button Content="Settings" Background="Transparent" BorderThickness="0" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <!-- Property Cards -->
+                <Border Background="White" Padding="20" Height="459">
+                    <ListBox ItemsSource="{Binding Properties}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0 0 0 10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Property Image -->
+                                        <Image Source="{Binding ImageUrl}" Width="200" Height="150" />
+
+                                        <!-- Price -->
+                                        <TextBlock Grid.Row="1" Text="{Binding PricePerMonth, StringFormat=Price: \{0\}}" />
+
+                                        <!-- Bathrooms and Rooms -->
+                                        <TextBlock Grid.Row="2" Text="{Binding Bathrooms, StringFormat=Bathrooms: \{0\}}" />
+                                        <TextBlock Grid.Row="2" Text="{Binding Rooms, StringFormat=Rooms: \{0\}}" Margin="100,0,0,0" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Border>
+                <!-- Property Cards -->
+                <!-- Property Cards -->
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

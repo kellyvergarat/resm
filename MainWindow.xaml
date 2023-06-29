@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealStateManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Height="422" Width="600" WindowStyle="None" WindowState="Maximized">
+    <Grid Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Height="322" Width="485">
+        <TextBlock Text="Real Estate System" FontSize="24" FontWeight="Bold"
+                   Foreground="#FF12A1B2" Margin="0,0,0,286" HorizontalAlignment="Center" />
 
+        <Label Content="Username:" Margin="138,91,234,205" />
+        <TextBox x:Name="txtUsername" Margin="224,89,138,205" />
+
+        <Label Content="Password:" Margin="138,134,278,160" />
+        <PasswordBox x:Name="txtPassword" Margin="224,136,138,161" />
+
+        <CheckBox x:Name="chkShowPassword" Content="Show Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,166,0,0" />
+
+        <Button x:Name="loginBtn" Content="Login" Background="#FF12A1B2" Foreground="White" Click="loginBtn_Click" Margin="138,203,265,85" />
+
+        <Button x:Name="clearBtn" Content="Clear" Background="#FF12A1B2" Foreground="White"
+                Click="clearBtn_Click" Margin="242,202,163,85" />
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="156,265,0,16" Width="161">
+            <TextBlock Text="Don't have an account?" />
+            <Button x:Name="goRegistrationBtn" Content="Go to registration"
+                    Background="#FF12A1B2" Foreground="White"
+                    Click="goRegistrationBtn_Click" />
+        </StackPanel>
+
+        <!-- TextBox controls to replace PasswordBox controls when "Show Password" is checked -->
     </Grid>
 </Window>
