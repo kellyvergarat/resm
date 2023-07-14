@@ -194,5 +194,12 @@ namespace RealStateManagement
             window.Show();
             Close();
         }
+
+        private void addPropButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProperty window = new AddProperty(User);
+            window.Show();
+            Close();
+        }
     }
 }

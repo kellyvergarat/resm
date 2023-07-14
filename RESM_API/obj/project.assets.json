@@ -1151,11 +1151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kelly\\source\\repos\\RESM_API\\RESM_API.csproj",
+      "projectUniqueName": "C:\\Users\\kelly\\source\\repos\\RESM_project\\RESM_API\\RESM_API.csproj",
       "projectName": "RESM_API",
-      "projectPath": "C:\\Users\\kelly\\source\\repos\\RESM_API\\RESM_API.csproj",
+      "projectPath": "C:\\Users\\kelly\\source\\repos\\RESM_project\\RESM_API\\RESM_API.csproj",
       "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kelly\\source\\repos\\RESM_API\\obj\\",
+      "outputPath": "C:\\Users\\kelly\\source\\repos\\RESM_project\\RESM_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kelly\\AppData\\Roaming\\NuGet\\NuGet.Config",

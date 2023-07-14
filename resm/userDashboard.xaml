@@ -87,6 +87,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
+                    <Button x:Name="addPropButton" Content="Add a new Property" HorizontalAlignment="Left" Margin="444,3,0,0" VerticalAlignment="Top" Foreground="#FFF4EDED" Background="#FF32ADCF" Width="116" BorderBrush="#FFEEF7F7" Click="addPropButton_Click"/>
                 </Grid>
             </Border>
         </Grid>
