@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESM_API", "RESM_API.csproj", "{9B2DE091-52DA-41AF-9D8B-4FCF0AC7C897}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealStateManagement", "..\resm\RealStateManagement.csproj", "{E7493C63-1EEA-4327-A50E-376BBF607124}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B2DE091-52DA-41AF-9D8B-4FCF0AC7C897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2DE091-52DA-41AF-9D8B-4FCF0AC7C897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2DE091-52DA-41AF-9D8B-4FCF0AC7C897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2DE091-52DA-41AF-9D8B-4FCF0AC7C897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7493C63-1EEA-4327-A50E-376BBF607124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7493C63-1EEA-4327-A50E-376BBF607124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7493C63-1EEA-4327-A50E-376BBF607124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7493C63-1EEA-4327-A50E-376BBF607124}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5681C5DF-04FA-43E6-AD4D-4CFAD52CFC38}
+	EndGlobalSection
+EndGlobal
