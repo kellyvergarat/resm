@@ -1,0 +1,45 @@
+﻿<Window x:Class="RealStateManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealStateManagement"
+        mc:Ignorable="d"
+
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Canvas Background="White">
+        <TextBlock Text="Real Estate System" FontSize="36" FontWeight="Bold"
+                   HorizontalAlignment="Left" Foreground="#FF12A1B2"
+                   Canvas.Left="260" Canvas.Top="53" VerticalAlignment="Top" />
+
+        <Label Content="Username:" Canvas.Left="276" Canvas.Top="123" />
+        <TextBox x:Name="txtUsername" Canvas.Left="386" Canvas.Top="133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" />
+
+        <Label Content="Password:" Canvas.Left="276" Canvas.Top="173" />
+        <PasswordBox x:Name="txtPassword" Canvas.Left="386" Canvas.Top="183" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" />
+
+        <CheckBox x:Name="chkShowPassword" Content="Show Password"
+                  Canvas.Left="396" Canvas.Top="206" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <Button x:Name="loginBtn" Content="Login"
+                Canvas.Left="307" Canvas.Top="256"
+                Width="91" Background="#FF12A1B2" Foreground="White" Height="28" Click="loginBtn_Click" />
+
+        <Button x:Name="clearBtn" Content="Clear"
+                Canvas.Left="424" Canvas.Top="256"
+                Width="85" Background="#FF12A1B2" Foreground="White"
+                Click="clearBtn_Click" Height="28" />
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left"
+                    Canvas.Left="339" Canvas.Top="314" VerticalAlignment="Top">
+            <TextBlock Text="Don't have an account?" />
+            <Button x:Name="goRegistrationBtn" Content="Go to registration"
+                    Background="#FF12A1B2" Foreground="White"
+                    Click="goRegistrationBtn_Click" />
+        </StackPanel>
+        <Button x:Name="close" Content="Close app"
+            Canvas.Left="685" Canvas.Top="394"
+            Width="91" Background="#FF12A1B2" Foreground="White" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" Click="close_Click" />
+
+    </Canvas>
+</Window>

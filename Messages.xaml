@@ -1,0 +1,89 @@
+﻿<Window x:Class="RealStateManagement.Messages"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealStateManagement"
+        mc:Ignorable="d"
+        Title="Messages" Height="600" Width="800" WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Navbar -->
+        <StackPanel Background="#FF12A1B2" Orientation="Horizontal" VerticalAlignment="Top" >
+            <TextBlock x:Name="headerMsg" FontSize="30" FontWeight="Bold" Foreground="White" />
+
+            <!-- Add more navbar options or functionality as needed -->
+            <Button x:Name="logoutBtn" Content="Logout" Margin="10,0,0,0" Background="#FF12A1B2" Foreground="White" Click="logoutBtn_Click" />
+        </StackPanel>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Sidebar -->
+            <StackPanel Background="#EAEAEA" VerticalAlignment="Top" Margin="0,3,0,0" Height="140">
+                <Button x:Name="goToDashboard" Content="My Properties" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" Click="goToDashboard_Click" />
+                <Button x:Name="goToSearch" Content="Search Properties" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" Click="goToSearch_Click" />
+                <Button x:Name="goToPayment" Content="Payment" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" Click="goToPayment_Click" />
+                <Button x:Name="goToMessages" Content="Messages" Background="Transparent" BorderThickness="0" Margin="0,0,0,10" Click="goToMessages_Click" />
+                <Button x:Name="goToSettings" Content="Settings" Background="Transparent" BorderThickness="0" Click="goToSettingsClick" />
+            </StackPanel>
+
+            <!-- Messages -->
+            <Border Grid.Column="1" Background="White" Padding="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Title -->
+                    <TextBlock x:Name="sectionTitle" FontSize="24" FontWeight="Bold" Margin="0,0,0,5" Text="Messages" />
+
+                    <!-- Messages -->
+                    <ListBox ItemsSource="{Binding MessagesReceived}" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0 0 0 10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <!-- From -->
+                                        <TextBlock Grid.Row="0" FontWeight="Bold" Text="From:" />
+                                        <TextBlock Grid.Row="0" Text="{Binding FromEmail}" Margin="50,0,0,0" />
+
+                                        <!-- Name -->
+                                        <TextBlock Grid.Row="1" FontWeight="Bold" Text="Name:" />
+                                        <TextBlock Grid.Row="1" Text="{Binding Name}" Margin="50,0,0,0" />
+
+                                        <!-- Contact Phone Number -->
+                                        <TextBlock Grid.Row="2" FontWeight="Bold" Text="Contact Phone Number:" />
+
+                                        <TextBlock Grid.Row="2" Text="{Binding Contact}" Margin="150,0,0,0" />
+
+                                        <!-- Message -->
+                                        <TextBlock Grid.Row="3" FontWeight="Bold" Text="Message:" />
+
+                                        <TextBlock Grid.Row="3" Text="{Binding MessageText}" TextWrapping="Wrap" Margin="50,0,0,0" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
